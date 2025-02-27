@@ -1,5 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journalism Section</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1e1e1e;
+    }
 
-Result Size: 750 x 641
+    header {
+      background-color: #ff9f1c;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .sub-header {
+      background-color: #46237a;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 1rem;
+    }
+
+    .issues-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .issue {
+      flex: 1;
+      max-width: 200px;
       text-align: center;
       color: white;
       padding: 20px;
@@ -8,23 +46,23 @@ Result Size: 750 x 641
       font-weight: bold;
       transition: transform 0.2s;
     }
-​
+
     .issue:hover {
       transform: scale(1.05);
     }
-​
+
     .issue1 {
       background-color: #b80000;
     }
-​
+
     .issue2 {
       background-color: #6c63ff;
     }
-​
+
     .issue3 {
       background-color: #00a3cc;
     }
-​
+
     .issue4 {
       background-color: #ff4500;
     }
@@ -45,4 +83,40 @@ Result Size: 750 x 641
   </div>
 </body>
 </html>
+
+button directs user to a different page/website (cannot be customized)
+<!--replace website with the website, obviously-->
+<form action='WEBSITE' method='get'>
+  <input type='submit' value='About Us'/>
+</form>
+
+Button directs user to different page/site (customizable)
+<!--index.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+    	.button-class {
+        	background-color: #FFC53F;
+        	color: white;
+        	padding: 20px 20px;
+        	/*customizable, changes padding to fit*/
+        	text-align: center;
+        	text-decoration: none;
+        	display: inline-block;
+        	font-size: 16px;
+        	margin: 4px 2px;
+        	cursor: pointer;
+        	border-radius: 16px;
+        	/*customizable, changes roundness*/
+    	}
+	</style>
+</head>
+
+<body>
+	<a href="WEBSITE" class="button-class">
+  	About Us</a>
+</body>
+</html>
+
 ​
