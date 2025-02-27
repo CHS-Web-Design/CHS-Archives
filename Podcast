@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEA TIME - Podcast</title>
+    <style type="text/css">
+       
+        body {
+            background-color: #0044cc; /* Blue Background */
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 0 px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .main-episode {
+            background: #63666A;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        .episode-list {
+            list-style: none;
+            padding: 0;
+        }
+        .episode-list li {
+            background: #63666A;
+            color: black;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+.Title {
+  font-family: Arial;
+  font-size: 40px;
+  font-weight: bold;
+  font-style: x-large;
+  text-align: center;
+  color: #ffffff;
+  margin-top:-30px;
+  }
+  .menu-icon {
+            width: 35px;
+            height: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left:5px;
+            margin-top:5px;
+        }
+        .menu-icon div {
+            height: 5px;
+            background-color: #232323;
+        }
+        
+        
+        
+        }
+        
+      
+    </style>
+
+
+<header>
+<div class="menu-icon">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+<div class="Title">Tea Time</div>
+</header>
+
+  
+<body>
+
+
+    <div class="container">
+        
+        <p>Welcome to our school podcast!</p>
+
+
+        <!-- Main Episode -->
+        <div class="main-episode">
+            <h2>Main Episode: Introduction</h2>
+            <p>Listen to our very first episode where we introduce TEA TIME!</p>
+            <audio controls>
+                <source src="episode1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+
+        <!-- Other Episodes -->
+        <ul class="episode-list">
+            <li>
+                <h3>Episode 2: School News</h3>
+                <p>Latest updates from CHS!</p>
+                <audio controls>
+                    <source src="episode2.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+            <li>
+                <h3>Episode 3: Student Interviews</h3>
+                <p>We talk with students about their experiences.</p>
+                <audio controls>
+                    <source src="episode3.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+        </ul>
+    </div>
+
+
+</body>
+</html>
+
