@@ -11,7 +11,7 @@
   font-style: x-large;
   text-align: center;
   color: #ffffff;
-  margin-top:15px;
+  margin-top:-30px;
 }
 .Left {
   font-family: Arial;
@@ -48,19 +48,32 @@
     text-align: right;
     width: 50%
 }
-
-
+ .menu-icon {
+            width: 35px;
+            height: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .menu-icon div {
+            height: 5px;
+            background-color: #232323;
+        }
 
 
 
 
 </style>
-
-
+<head>
+<div class="menu-icon">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 <p class="Title">
   CHS ARCHIVES
 </p>
-
+</head>
 
 <article class="item">
 <p class="Left">JOURNALISM</p><p class="Right">PODCAST</p>
@@ -69,7 +82,3 @@
 
 <body style="background-image: linear-gradient(#003768 8%,#F9B722 1%,#F9B722 9%,#F5F5DC 2%);">
 </body>
-
-
-<button class="menu"> mao
-</button>
