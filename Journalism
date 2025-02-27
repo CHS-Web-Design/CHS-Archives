@@ -1,0 +1,48 @@
+
+Result Size: 750 x 641
+      text-align: center;
+      color: white;
+      padding: 20px;
+      cursor: pointer;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+​
+    .issue:hover {
+      transform: scale(1.05);
+    }
+​
+    .issue1 {
+      background-color: #b80000;
+    }
+​
+    .issue2 {
+      background-color: #6c63ff;
+    }
+​
+    .issue3 {
+      background-color: #00a3cc;
+    }
+​
+    .issue4 {
+      background-color: #ff4500;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    JOURNALISM
+  </header>
+  <div class="sub-header">
+    This is the journalism section, where students present, investigate, and report news/stories.
+  </div>
+  <div class="issues-container">
+    <div class="issue issue1">ISSUE 1</div>
+    <div class="issue issue2">ISSUE 2</div>
+    <div class="issue issue3">ISSUE 3</div>
+    <div class="issue issue4">ISSUE 4</div>
+  </div>
+</body>
+</html>
+​
