@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEA TIME - Podcast</title>
-    <style type="text/css">
-       
+    <title>TEA TIME - School Podcast</title>
+    <style>
         body {
-            background-color: #0044cc; /* Blue Background */
+            background-color: #0044cc;
             color: white;
             font-family: Arial, sans-serif;
             text-align: center;
@@ -16,13 +16,13 @@
         .container {
             width: 80%;
             margin: auto;
-            padding: 0 px;
+            padding: 20px;
         }
         h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
         }
-        .main-episode {
+        .main-episode, .episode-list li {
             background: #63666A;
             color: black;
             padding: 20px;
@@ -30,72 +30,65 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             margin-bottom: 20px;
         }
-        .episode-list {
-            list-style: none;
-            padding: 0;
-        }
-        .episode-list li {
-            background: #63666A;
-            color: black;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
         audio {
             width: 100%;
             margin-top: 10px;
         }
-        
-.Title {
-  font-family: Arial;
-  font-size: 40px;
-  font-weight: bold;
-  font-style: x-large;
-  text-align: center;
-  color: #ffffff;
-  margin-top:-30px;
-  }
-  .menu-icon {
+        .menu-icon {
             width: 35px;
             height: 25px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            margin-left:5px;
-            margin-top:5px;
+            position: absolute;
+            left: 10px;
+            top: 10px;
         }
         .menu-icon div {
             height: 5px;
-            background-color: #232323;
+            background-color: white;
         }
-        
-        
-        
+        .search-bar {
+            margin-bottom: 20px;
         }
-        
-      
+        input[type="text"] {
+            padding: 10px;
+            width: 70%;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            padding: 10px;
+            background: #f4a261;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .footer {
+            margin-top: 20px;
+            padding: 10px;
+            background: black;
+        }
     </style>
-
-
-<header>
-<div class="menu-icon">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-
-<div class="Title">Tea Time</div>
-</header>
-
-  
+</head>
 <body>
-
-
+    <header>
+        <div class="menu-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <h1>TEA TIME - School Podcast</h1>
+    </header>
     <div class="container">
+        <p>Welcome to our school podcast! Stay updated with the latest stories, interviews, and events from CHS.</p>
         
-        <p>Welcome to our school podcast!</p>
-
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search episodes...">
+            <button>Search</button>
+        </div>
 
         <!-- Main Episode -->
         <div class="main-episode">
@@ -107,7 +100,6 @@
             </audio>
         </div>
 
-
         <!-- Other Episodes -->
         <ul class="episode-list">
             <li>
@@ -115,7 +107,6 @@
                 <p>Latest updates from CHS!</p>
                 <audio controls>
                     <source src="episode2.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
                 </audio>
             </li>
             <li>
@@ -123,13 +114,24 @@
                 <p>We talk with students about their experiences.</p>
                 <audio controls>
                     <source src="episode3.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
                 </audio>
             </li>
         </ul>
+
+        <!-- Email Newsletter Signup -->
+        <div>
+            <h3>Stay Updated</h3>
+            <p>Sign up for our newsletter to never miss an episode!</p>
+            <input type="email" placeholder="Enter your email">
+            <button>Subscribe</button>
+        </div>
     </div>
 
-
+    <!-- Footer with Policies -->
+    <div class="footer">
+        <p>&copy; 2025 CHS Podcast | <a href="#" style="color: white;">Privacy Policy</a></p>
+    </div>
 </body>
 </html>
+
 
