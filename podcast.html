@@ -12,6 +12,7 @@
             text-align: center;
             margin: 0;
             padding: 0;
+            transition: background-color 0.3s, color 0.3s;
         }
         .container {
             width: 80%;
@@ -29,6 +30,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             margin-bottom: 20px;
+            list-style: none;
         }
         audio {
             width: 100%;
@@ -48,10 +50,22 @@
             height: 5px;
             background-color: white;
         }
+        nav {
+            background: black;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
         .search-bar {
             margin-bottom: 20px;
         }
-        input[type="text"] {
+        input[type="text"], input[type="email"] {
             padding: 10px;
             width: 70%;
             border-radius: 5px;
@@ -64,29 +78,55 @@
             color: white;
             cursor: pointer;
             border-radius: 5px;
+            margin-top: 10px;
         }
         .footer {
             margin-top: 20px;
             padding: 10px;
             background: black;
+            color: white;
+        }
+        .episode-list {
+            padding: 0;
+        }
+        /* Dark Mode */
+        .dark-mode {
+            background-color: #222;
+            color: white;
+        }
+        .dark-mode .main-episode, .dark-mode .episode-list li {
+            background: #444;
+            color: white;
+        }
+        .dark-mode nav {
+            background: #333;
+        }
+        .dark-mode .menu-icon div {
+            background-color: white;
+        }
+        .dark-mode button {
+            background: #f4a261;
         }
     </style>
 </head>
 <body>
-    <header>
+    <!-- Navigation -->
+    <nav>
         <div class="menu-icon">
             <div></div>
             <div></div>
             <div></div>
         </div>
-        <h1>TEA TIME - School Podcast</h1>
-    </header>
+        <h1>TEA TIME</h1>
+        <button onclick="toggleDarkMode()">Dark Mode</button>
+    </nav>
+
     <div class="container">
         <p>Welcome to our school podcast! Stay updated with the latest stories, interviews, and events from CHS.</p>
         
         <!-- Search Bar -->
         <div class="search-bar">
-            <input type="text" placeholder="Search episodes...">
+            <input type="text" id="search-input" placeholder="Search episodes..." onkeyup="filterEpisodes()">
             <button>Search</button>
         </div>
 
@@ -102,18 +142,20 @@
 
         <!-- Other Episodes -->
         <ul class="episode-list">
-            <li>
+            <li class="episode">
                 <h3>Episode 2: School News</h3>
                 <p>Latest updates from CHS!</p>
                 <audio controls>
                     <source src="episode2.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
                 </audio>
             </li>
-            <li>
+            <li class="episode">
                 <h3>Episode 3: Student Interviews</h3>
                 <p>We talk with students about their experiences.</p>
                 <audio controls>
                     <source src="episode3.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
                 </audio>
             </li>
         </ul>
@@ -128,10 +170,30 @@
     </div>
 
     <!-- Footer with Policies -->
-    <div class="footer">
-        <p>&copy; 2025 CHS Podcast | <a href="#" style="color: white;">Privacy Policy</a></p>
-    </div>
+    <footer class="footer">
+        <p>&copy; 2025 TEA TIME Podcast. All rights reserved.</p>
+        <p><a href="#" style="color: white;">Privacy Policy</a> | <a href="#" style="color: white;">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+
+        function filterEpisodes() {
+            let input = document.getElementById('search-input').value.toLowerCase();
+            let episodes = document.querySelectorAll('.episode');
+
+            episodes.forEach(episode => {
+                let title = episode.querySelector('h3').innerText.toLowerCase();
+                let description = episode.querySelector('p').innerText.toLowerCase();
+                
+                if (title.includes(input) || description.includes(input)) {
+                    episode.style.display = "block";
+                } else {
+                    episode.style.display = "none";
+                }
+            });
+        }
+    </script>
 </body>
-</html>
-
-
