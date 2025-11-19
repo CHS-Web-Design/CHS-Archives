@@ -1,1 +1,44 @@
+.Title {
+  font-family: Arial;
+  font-size: 40px;
+  font-weight: bold;
+  font-style: x-large;
+  text-align: center;
+  color: #ffffff;
+  margin-top:15px;
+}
+.Left {
+  font-family: Arial;
+  font-size: 40px;
+  font-weight: bold;
+  font-style: x-large;
+  color: #ffffff;
+  text-shadow:
+  3px 3px 0 #003768,
+    -3px 3px 0 #003768,
+    -3px -3px 0 #003768,
+    3px -3px 0 #003768;
+    text-align: left;
+    width: 50%;
+}
 
+
+.item p{
+  display: inline-block;
+}
+
+
+.Right {
+  font-family: Arial;
+  font-size: 40px;
+  font-weight: bold;
+  font-style: x-large;
+  color: #ffffff;
+  text-shadow:
+  3px 3px 0 #003768,
+    -3px 3px 0 #003768,
+    -3px -3px 0 #003768,
+    3px -3px 0 #003768;
+    text-align: right;
+    width: 50%
+}
