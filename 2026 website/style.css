@@ -1,0 +1,52 @@
+CSS
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+.header {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8c2f2f;
+  padding: 20px;
+}
+
+.header img {
+  width: 70px;
+  height: auto;
+  margin-right: 15px;
+}
+.header h1 {
+  margin:0;
+  font-size: 40px;
+}
+.slideshow{
+    text-align: center;
+    padding: 30px;
+}
+.slideshow img {
+  width: 80%;
+  max-width: 900px;
+  border: 2px solid #b5adad;
+  border-radius: 10px;
+}
+.slide h2 {
+  font-size: 32px;
+  margin-top: 20px;
+}
+.slide p {
+  font-size: 18px;
+  color: #330202;
+}
+.next-button{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #d81313;
+    color: #130404;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    opacity: 0.8;
+}
